@@ -34,6 +34,7 @@ jobs:
              -r cli,htmlextra
 
       - name: Newman Report
+        if: always() #ensure that archive section is going to be executed even if previous step is passed or not
         uses: actions/upload-artifact@v5.0.0
         with: 
           name: Newman Report
