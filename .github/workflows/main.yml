@@ -4,9 +4,8 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron : 30 02 * * * # 8 AM IST Everyday
-    - cron : 00 12 * * * # 7.30 PM IST Everyday
-    - cron : 30 10 * * 1-5 # 4 PM IST Monday to Friday
+    - cron : 30 02 * * 1 # 8 AM IST Monday
+    - cron : 30 10 * * 5 # 4 PM IST Friday
 
 jobs: 
   run-postman-tests:
