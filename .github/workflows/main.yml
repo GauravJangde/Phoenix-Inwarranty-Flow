@@ -4,12 +4,11 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron : 30 02 * * 1 # 8 AM IST Monday
     - cron : 30 10 * * 5 # 4 PM IST Friday
 
 jobs: 
   run-postman-tests:
-    runs-on: ec2-github-runner
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkout the code
